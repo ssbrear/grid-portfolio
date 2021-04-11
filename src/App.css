@@ -1,5 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+
 body {
   margin: 0;
-  background: linear-gradient(rgb(88,88,253), red, 90deg)
-  /*background: rgb(88, 88, 253);*/
+  font-family: Teko;
+  text-align: center;
+}
+header h1 {
+  font-size: 4rem;
+}
+#about-article {
+  display: grid;
+  grid-template-areas:
+    ". img . ."
+    ". img h2 ."
+    ". img p .";
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+#about-article h2 {
+  font-size: 3rem;
+  grid-area: h2;
+  margin: 0;
+}
+/*
+===== Picture of me with Biscuit in LA =====
+Dimensions:
+      width = 960px
+      height = 956px
+*/
+#about-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  grid-area: img;
+  align-self: center;
+  border: 1px solid black;
+}
+#about-article p {
+  grid-area: p;
+  align-self: start;
+  font-size: 2rem;
+  padding: 0 1em;
+}
+
+#projects-article {
+  margin-top:20em;
+}
+#projects-article h2 {
+  font-size: 3rem;
+}
+
+@media (max-width: 1300px) {
+  #about-article {
+    grid-template-areas:
+      ". h2 ."
+      ". img ."
+      ". p .";
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #about-article img {
+    margin: 2em 0;
+  }
+  #scroll-down-button {
+    display: none;
+  }
 }
