@@ -59,7 +59,7 @@ function App() {
       </header>
       <article id="about-article">
         <h2>About me</h2>
-        <img alt="Me with my dog, Biscuit." src="profile.jpg"></img>
+        <img alt="Me with my dog, Biscuit." src="images/profile.jpg"></img>
         <p>I'm a current UC Davis student pursuing a degree in Electrical Engineering, with a passion for coding and web development</p>
       </article>
       <article id="projects-article">

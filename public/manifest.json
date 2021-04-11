@@ -1,7 +1,33 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [],
+  "short_name": "SSB Portfolio",
+  "name": "Sebastian Scott Brear Portfolio",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/apple-touch-icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/images/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/images/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
