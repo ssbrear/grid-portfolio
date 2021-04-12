@@ -51,7 +51,7 @@ function App() {
       Image: "https://i.ibb.co/nw7dStM/magicSMS.png",
       Description:
         "This is the first page I created after graduating from the bootcamp that I attended. I worked with John Baxter, a fellow graduate and I was personally responsible for all of the front-end development.",
-      Link: "http://www.a-zsms.com/",
+      Link: "https://www.a-zsms.com/",
       Tags: ["React", "Flexbox", "API", "Passport", "MongoDB"],
     },
   ];
