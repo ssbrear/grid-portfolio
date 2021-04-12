@@ -20,7 +20,7 @@ function App() {
       Description:
         "This was the final project of the bootcamp I participated in, and where I learned everything I know about React. I was personally responsible for all of the front-end for this project, and so I decided on leaning in on my CSS skills to try and replicate a well-known interface, Discord. I am very pleased with how it turned out, and I'm excited to try and replicate another UI in the future, as it was very educational.",
       Link: "http://jbaxter-supportx.herokuapp.com/dashboard",
-      Tags: ["Integrated Chat", "Flexbox", "React"],
+      Tags: ["Chat", "Flexbox", "React", "Passport", "MongoDB"],
     },
     {
       Title: "My List",
@@ -28,7 +28,7 @@ function App() {
       Description:
         "This is a side project I started working on after learning how to use Local Storage to store data in the browser such that different users could keep track of and check off items in a list. Later on after learning how to create and implement a database, this project was completely redone with MySQL and Passport.",
       Link: "https://my-list-db.herokuapp.com/list",
-      Tags: ["MongoDB", "Bootstrap", "jQuery"],
+      Tags: ["MySQL", "Bootstrap", "jQuery", "Passport"],
     },
     {
       Title: "Weather Dashboard",
@@ -52,7 +52,7 @@ function App() {
       Description:
         "This is the first page I created after graduating from the bootcamp that I attended. I worked with John Baxter, a fellow graduate and I was personally responsible for all of the front-end development.",
       Link: "http://www.a-zsms.com/",
-      Tags: ["React", "Flexbox", "API"],
+      Tags: ["React", "Flexbox", "API", "Passport", "MongoDB"],
     },
   ];
   const tagListNonUnique = ["All"];
@@ -109,7 +109,15 @@ function App() {
         <h2>Projects</h2>
         <h3>
           {tagListUnique.map((x, i) => {
-            return <Tag setTag={setTag} key={i} hue={hues[i]} tag={x} />;
+            return (
+              <Tag
+                currentTag={currentTag}
+                setTag={setTag}
+                key={i}
+                hue={hues[i]}
+                thisTag={x}
+              />
+            );
           })}
         </h3>
         <section id="projects-container">
