@@ -5,9 +5,20 @@ body {
   font-family: Teko;
   text-align: center;
 }
+a {
+  color: inherit;
+  transition: all 0.1s ease-in-out;
+}
+a:hover {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+/* PAGE TITLE */
 header h1 {
   font-size: 4rem;
 }
+
+/* ABOUT ME */
 #about-article {
   display: grid;
   grid-template-areas:
@@ -43,26 +54,80 @@ Dimensions:
   padding: 0 1em;
 }
 
+/* PROJECTS */
 #projects-article {
-  margin-top:20em;
+  margin-top: 20em;
 }
 #projects-article h2 {
   font-size: 3rem;
+  margin: 0;
+}
+/* TAGS */
+#projects-article > h3 {
+  display: grid;
+  grid-template-columns: repeat(5, 10em);
+  grid-auto-rows: 3em;
+  justify-content: center;
+  margin: 0;
+}
+.tag {
+  font-size: 1.5rem;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 8px;
+}
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#projects-container > div {
+  margin: 2em 0;
+}
+.project-title {
+  font-size: 2rem;
+}
+.project-image {
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  font-size: 1.5rem;
 }
 
-@media (max-width: 1300px) {
+/* MEDIA QUERIES OVERWRITE PREVIOUS CSS */
+@media (max-width: 1340px) {
   #about-article {
     grid-template-areas:
-      ". h2 ."
-      ". img ."
-      ". p .";
+      ". . h2 . ."
+      ". . img . ."
+      ". . p . .";
     grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   }
   #about-article img {
     margin: 2em 0;
   }
   #scroll-down-button {
     display: none;
+  }
+  #about-article p {
+    grid-column: 2/5;
+  }
+  #projects-article > h3 {
+    grid-template-columns: repeat(3, 10em);
+  }
+  .tag {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  :is(#about-article, #projects-article) h2 {
+    font-size: 2rem;
   }
 }
