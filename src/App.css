@@ -187,6 +187,23 @@ figcaption {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 750px) {
+  #projects-article > h3 {
+    grid-template-columns: repeat(2, 10em);
+    grid-auto-rows: 2.25em;
+  }
+  .tag {
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  .selected-tag {
+    font-size: 1.125rem;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 900;
+  }
+}
 @media (max-width: 550px) {
   #about-article {
     grid-template-areas:
@@ -207,5 +224,8 @@ figcaption {
   }
   #about-article > p {
     font-size: 1.5rem;
+  }
+  figcaption {
+    font-size: 0.75rem;
   }
 }
