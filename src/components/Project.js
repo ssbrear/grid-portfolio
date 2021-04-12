@@ -10,7 +10,12 @@ function Project({ data, currentTag }) {
   }
   return (
     <div className={`${show ? "" : "hide"}`}>
-      <a href={data.Link} className="project-title">
+      <a
+        href={data.Link}
+        className="project-title"
+        target="_blank"
+        rel="noreferrer"
+      >
         {data.Title}
       </a>
       <figure>
