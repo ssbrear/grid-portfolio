@@ -1,9 +1,10 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Project from "./components/Project";
 import Tag from "./components/Tag";
 
 function App() {
+  const [currentTag, setTag] = useState("All");
   const ProjectData = [
     {
       Title: "Super Similar",
@@ -82,12 +83,14 @@ function App() {
         <h2>Projects</h2>
         <h3>
           {tagListUnique.map((x, i) => {
-            return <Tag key={i} hue={hues[i]} tag={x} />;
+            return <Tag setTag={setTag} key={i} hue={hues[i]} tag={x} />;
           })}
         </h3>
         <section id="projects-container">
           {ProjectData.map((project, i) => {
-            return <Project key={i} data={ProjectData[i]} />;
+            return (
+              <Project currentTag={currentTag} key={i} data={ProjectData[i]} />
+            );
           })}
         </section>
       </article>

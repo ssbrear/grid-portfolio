@@ -5,6 +5,9 @@ body {
   font-family: Teko;
   text-align: center;
 }
+.hide {
+  display: none;
+}
 a {
   color: inherit;
   transition: all 0.1s ease-in-out;

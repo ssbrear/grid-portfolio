@@ -1,8 +1,15 @@
 import React from "react";
 
-function Project({ data }) {
+function Project({ data, currentTag }) {
+  let show = false;
+  if (currentTag === "All") show = true;
+  else {
+    data.Tags.forEach((tag) => {
+      if (tag === currentTag) show = true;
+    });
+  }
   return (
-    <div>
+    <div className={`${show ? "" : "hide"}`}>
       <a href={data.Link} className="project-title">
         {data.Title}
       </a>
