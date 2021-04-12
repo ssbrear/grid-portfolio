@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 body {
   margin: 0;
   font-family: Teko;
@@ -12,9 +12,8 @@ a {
   color: inherit;
   transition: all 0.1s ease-in-out;
 }
-a:hover {
+.project-title:hover {
   font-weight: 900;
-  font-size: 2.5rem;
 }
 /* PAGE TITLE */
 header h1 {
@@ -25,8 +24,8 @@ header h1 {
 #about-article {
   display: grid;
   grid-template-areas:
-    ". img . ."
     ". img h2 ."
+    ". img a ."
     ". img p .";
   grid-template-rows: 1fr 1fr 3fr;
   grid-template-columns: repeat(4, 1fr);
@@ -36,13 +35,31 @@ header h1 {
   grid-area: h2;
   margin: 0;
 }
+.socials {
+  grid-area: a;
+  font-size: 1.5rem;
+  justify-self: center;
+}
+#github-link {
+  align-self: end;
+}
+#linkedin-link {
+  align-self: start;
+}
+a > img {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: 8px;
+  right: 4px;
+}
 /*
 ===== Picture of me with Biscuit in LA =====
 Dimensions:
       width = 960px
       height = 956px
 */
-#about-article img {
+#about-article > img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
@@ -87,7 +104,9 @@ Dimensions:
   grid-template-columns: repeat(2, 1fr);
 }
 #projects-container > div {
-  margin: 2em 0;
+  background-color: #c7d8e7;
+  margin: 2em 1em;
+  border: 1px dotted black;
 }
 .project-title {
   font-size: 2rem;
@@ -98,6 +117,7 @@ Dimensions:
 }
 figcaption {
   font-size: 1.5rem;
+  font-family: Kiwi Maru;
 }
 
 /* MEDIA QUERIES OVERWRITE PREVIOUS CSS */
@@ -106,11 +126,12 @@ figcaption {
     grid-template-areas:
       ". . h2 . ."
       ". . img . ."
-      ". . p . .";
+      ". . p . ."
+      ". . a . .";
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   }
-  #about-article img {
+  #about-article > img {
     margin: 2em 0;
   }
   #scroll-down-button {
@@ -125,6 +146,21 @@ figcaption {
   .tag {
     font-size: 1rem;
   }
+  #projects-container {
+    grid-template-columns: 1fr;
+  }
+  .socials {
+    align-self: center;
+  }
+  #github-link {
+    justify-self: start;
+  }
+  #linkedin-link {
+    justify-self: end;
+  }
+  a > img {
+    margin: 0;
+  }
 }
 @media (max-width: 900px) {
   header h1 {
@@ -132,5 +168,27 @@ figcaption {
   }
   :is(#about-article, #projects-article) h2 {
     font-size: 2rem;
+  }
+}
+@media (max-width: 550px) {
+  #about-article {
+    grid-template-areas:
+      ". . h2 . ."
+      ". . img . ."
+      ". . p . ."
+      ". gh  . li .";
+  }
+  #github-link {
+    grid-area: gh;
+    grid-column: 1/3;
+    justify-self: center;
+  }
+  #linkedin-link {
+    grid-area: li;
+    grid-column: 4/6;
+    justify-self: center;
+  }
+  #about-article > p {
+    font-size: 1.5rem;
   }
 }
