@@ -20,7 +20,7 @@ function App() {
       Description:
         "This was the final project of the bootcamp I participated in, and where I learned everything I know about React. I was personally responsible for all of the front-end for this project, and so I decided on leaning in on my CSS skills to try and replicate a well-known interface, Discord. I am very pleased with how it turned out, and I'm excited to try and replicate another UI in the future, as it was very educational.",
       Link: "http://jbaxter-supportx.herokuapp.com/dashboard",
-      Tags: ["Chat", "Flexbox", "React", "Passport", "MongoDB"],
+      Tags: ["Chat", "Flexbox", "React", "Passport", "MongoDB", "Express"],
     },
     {
       Title: "My List",
@@ -28,7 +28,7 @@ function App() {
       Description:
         "This is a side project I started working on after learning how to use Local Storage to store data in the browser such that different users could keep track of and check off items in a list. Later on after learning how to create and implement a database, this project was completely redone with MySQL and Passport.",
       Link: "https://my-list-db.herokuapp.com/list",
-      Tags: ["MySQL", "Bootstrap", "jQuery", "Passport"],
+      Tags: ["MySQL", "Bootstrap", "jQuery", "Passport", "Express"],
     },
     {
       Title: "Weather Dashboard",
@@ -44,7 +44,7 @@ function App() {
       Description:
         "This is the first page I made using jQuery, and it was nice to not have to write as much code for the same functionality. The most frustrating part of this assignment is that I could not figure out how to make text sizes responsive without resorting to either media queries in CSS or an event listener in JS (I picked the media queries).",
       Link: "https://ssbrear.github.io/tic-tac-toe/",
-      Tags: ["Bootstrap"],
+      Tags: ["Bootstrap", "jQuery"],
     },
     {
       Title: "MagicSMS",
@@ -52,7 +52,15 @@ function App() {
       Description:
         "This is the first page I created after graduating from the bootcamp that I attended. I worked with John Baxter, a fellow graduate and I was personally responsible for all of the front-end development.",
       Link: "https://www.a-zsms.com/",
-      Tags: ["React", "Flexbox", "API", "Passport", "MongoDB"],
+      Tags: ["React", "Flexbox", "API", "Passport", "MongoDB", "Express"],
+    },
+    {
+      Title: "Coffee Blog",
+      Image: "https://i.ibb.co/jz6Qfjt/Capture.png",
+      Description:
+        "This project was designed to help me catch up on my backend skills. It's easy to forget technologies that you never use! I created a very basic frontend design, as I wanted to spend most of the time working with Sequelize and Express. I even solved a CORS error for the first time, which felt great since that was a roadblock for me in the past.",
+      Link: "https://ssbrear-blog.herokuapp.com/?",
+      Tags: ["React", "CSS Grid", "API", "MySQL", "Express"],
     },
   ];
   const tagListNonUnique = ["All"];
