@@ -62,6 +62,14 @@ function App() {
       Link: "https://ssbrear-blog.herokuapp.com/?",
       Tags: ["React", "CSS Grid", "API", "MySQL", "Express"],
     },
+    {
+      Title: "Minesweeper",
+      Image: "https://i.ibb.co/0tpgtTf/Capture.png",
+      Description:
+        "I decided to pick up a new frontend framework, and I see a lot of people using Vue.js so I thought I would give it a shot. I found it similar to React.js, which is something I'm comfortable using so that definitely helped a lot. Overall, I'm actually much happier with Vue, and I plan to use it moving forward as a replacement for React, at least until I find out it's missing something I need.",
+      Link: "https://ssbrear-blog.herokuapp.com/?",
+      Tags: ["Vue", "CSS Grid"],
+    },
   ];
   const tagListNonUnique = ["All"];
   ProjectData.forEach((project) => {
