@@ -71,7 +71,7 @@ function App() {
       Tags: ["Vue", "CSS Grid"],
     },{
       Title: "Snake",
-      Image: "https://i.ibb.co/BKWdrpN/Capture.png",
+      Image: "https://i.ibb.co/V3wVnRC/Capture.png",
       Description:
         "I wanted to get some recent practice with jQuery and an excuse to try out some basic SCSS. Nothing else to say other than the style is similar to the Minesweeper clone I created and it's the same as the classic Snake game.",
       Link: "https://ssbrear.github.io/snake/",
