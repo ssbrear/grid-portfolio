@@ -7,6 +7,30 @@ function App() {
   const [currentTag, setTag] = useState("All");
   const ProjectData = [
     {
+      Title: "WoW LP",
+      Image: "https://i.ibb.co/DPdqYht/Capture.png",
+      Description:
+        "WoW LP is a 3rd-party player rating system I created for the online game World of Warcraft. Users can login to their game account using secure OAuth2.0 to rate other players, or simply browse ratings without logging in. This is a project I created to become more familiar with the tech stack that my employer uses. Many of the challenges I came across in this problem helped me prepare for similar challenges at work. I also wanted to go all the way for this project so I learned how to register a domain and configure DNS records with Cloudflare.",
+      Link: "https://www.wow-lp.com",
+      Tags: ["Laravel", "PHP", "Vue", "Postgres", "API"],
+    },
+    {
+      Title: "Minesweeper",
+      Image: "https://i.ibb.co/0tpgtTf/Capture.png",
+      Description:
+        "I decided to pick up a new frontend framework, and I see a lot of people using Vue.js so I thought I would give it a shot. I found it similar to React.js, which is something I'm comfortable using so that definitely helped a lot. Overall, I'm actually much happier with Vue, and I plan to use it moving forward as a replacement for React, at least until I find out it's missing something I need.",
+      Link: "https://ssbrear-minesweeper.netlify.app/?",
+      Tags: ["Vue", "CSS Grid"],
+    },
+    {
+      Title: "Snake",
+      Image: "https://i.ibb.co/V3wVnRC/Capture.png",
+      Description:
+        "I wanted to get some recent practice with jQuery and an excuse to try out some basic SCSS. Nothing else to say other than the style is similar to the Minesweeper clone I created and it's the same as the classic Snake game.",
+      Link: "https://ssbrear.github.io/snake/",
+      Tags: ["jQuery", "CSS Grid", "SCSS"],
+    },
+    {
       Title: "Super Similar",
       Image: "https://i.ibb.co/mBy44z5/similar.jpg",
       Description:
@@ -14,14 +38,14 @@ function App() {
       Link: "https://ssbrear.github.io/group-project/",
       Tags: ["jQuery", "API", "Foundation"],
     },
-    {
-      Title: "SupportX",
-      Image: "https://i.ibb.co/52nPw4v/discordclone.jpg",
-      Description:
-        "This was the final project of the bootcamp I participated in, and where I learned everything I know about React. I was personally responsible for all of the front-end for this project, and so I decided on leaning in on my CSS skills to try and replicate a well-known interface, Discord. I am very pleased with how it turned out, and I'm excited to try and replicate another UI in the future, as it was very educational.",
-      Link: "http://jbaxter-supportx.herokuapp.com/dashboard",
-      Tags: ["Chat", "Flexbox", "React", "Passport", "MongoDB", "Express"],
-    },
+    // {
+    //   Title: "SupportX",
+    //   Image: "https://i.ibb.co/52nPw4v/discordclone.jpg",
+    //   Description:
+    //     "This was the final project of the bootcamp I participated in, and where I learned everything I know about React. I was personally responsible for all of the front-end for this project, and so I decided on leaning in on my CSS skills to try and replicate a well-known interface, Discord. I am very pleased with how it turned out, and I'm excited to try and replicate another UI in the future, as it was very educational.",
+    //   Link: "http://jbaxter-supportx.herokuapp.com/dashboard",
+    //   Tags: ["Chat", "Flexbox", "React", "Passport", "MongoDB", "Express"],
+    // },
     {
       Title: "My List",
       Image: "https://i.ibb.co/F323y3t/list.jpg",
@@ -46,14 +70,14 @@ function App() {
       Link: "https://ssbrear.github.io/tic-tac-toe/",
       Tags: ["Bootstrap", "jQuery"],
     },
-    {
-      Title: "MagicSMS",
-      Image: "https://i.ibb.co/nw7dStM/magicSMS.png",
-      Description:
-        "This is the first page I created after graduating from the bootcamp that I attended. I worked with John Baxter, a fellow graduate and I was personally responsible for all of the front-end development.",
-      Link: "https://www.a-zsms.com/",
-      Tags: ["React", "Flexbox", "API", "Passport", "MongoDB", "Express"],
-    },
+    // {
+    //   Title: "MagicSMS",
+    //   Image: "https://i.ibb.co/nw7dStM/magicSMS.png",
+    //   Description:
+    //     "This is the first page I created after graduating from the bootcamp that I attended. I worked with John Baxter, a fellow graduate and I was personally responsible for all of the front-end development.",
+    //   Link: "https://www.a-zsms.com/",
+    //   Tags: ["React", "Flexbox", "API", "Passport", "MongoDB", "Express"],
+    // },
     {
       Title: "Coffee Blog",
       Image: "https://i.ibb.co/jz6Qfjt/Capture.png",
@@ -61,21 +85,6 @@ function App() {
         "This project was designed to help me catch up on my backend skills. It's easy to forget technologies that you never use! I created a very basic frontend design, as I wanted to spend most of the time working with Sequelize and Express. I even solved a CORS error for the first time, which felt great since that was a roadblock for me in the past.",
       Link: "https://ssbrear-blog.herokuapp.com/?",
       Tags: ["React", "CSS Grid", "API", "MySQL", "Express"],
-    },
-    {
-      Title: "Minesweeper",
-      Image: "https://i.ibb.co/0tpgtTf/Capture.png",
-      Description:
-        "I decided to pick up a new frontend framework, and I see a lot of people using Vue.js so I thought I would give it a shot. I found it similar to React.js, which is something I'm comfortable using so that definitely helped a lot. Overall, I'm actually much happier with Vue, and I plan to use it moving forward as a replacement for React, at least until I find out it's missing something I need.",
-      Link: "https://ssbrear-minesweeper.netlify.app/?",
-      Tags: ["Vue", "CSS Grid"],
-    },{
-      Title: "Snake",
-      Image: "https://i.ibb.co/V3wVnRC/Capture.png",
-      Description:
-        "I wanted to get some recent practice with jQuery and an excuse to try out some basic SCSS. Nothing else to say other than the style is similar to the Minesweeper clone I created and it's the same as the classic Snake game.",
-      Link: "https://ssbrear.github.io/snake/",
-      Tags: ["jQuery", "CSS Grid", "SCSS"],
     },
   ];
   const tagListNonUnique = ["All"];
@@ -92,7 +101,7 @@ function App() {
   return (
     <main className="App">
       <header>
-        <h1>Websites focused on an intuitive user experience</h1>
+        <h1>Web development focused on an intuitive user experience</h1>
       </header>
       <article id="about-article">
         <h2>About me</h2>
@@ -124,8 +133,7 @@ function App() {
         </a>
         <img alt="Me with my dog, Biscuit." src="images/profile.jpg"></img>
         <p>
-          I'm a current UC Davis student pursuing a degree in Electrical
-          Engineering, with a passion for coding and web development
+          I'm a full stack web developer with a background in Electrical Engineering and a passion for learning and utilizing new technologies
         </p>
       </article>
       <article id="projects-article">
