@@ -7,6 +7,13 @@ function App() {
   const [currentTag, setTag] = useState("All");
   const ProjectData = [
     {
+      Title: "Conway's Game of Life",
+      Image: "https://i.ibb.co/sJzrcNM/Capture.png",
+      Description: "Conway's Game of Life is an automation game created by John Horton Conway in 1970. It's commonly used as an example of the halting problem, or an undecidable program. This basically means no algorithm exists that can tell if a certain pattern will appear eventually given certain initial conditions. I was inspired to create this after watching a Veritasium video on youtube titled Math's \"Fundamental Flaw\". I decided to build it in React to refamiliarize myself with a frontend framework I don't use often since we use Vue at my current job.",
+      Link: "https://brear-life.netlify.app/",
+      Tags: ["React"]
+    },
+    {
       Title: "WoW LP",
       Image: "https://i.ibb.co/DPdqYht/Capture.png",
       Description:
